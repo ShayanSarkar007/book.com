@@ -5,22 +5,11 @@ import './App.css'
 import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import MyFooter from './components/MyFooter' 
-import axios from 'axios'
+
 
 
 function App() {
-  const [name, setName] =useState()
-  const [email, setEmail] = useState()
-  const[password, setPassword] = useState()
-  axios.defaults.withCredentials = true;
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios.post('storylane-com-api.vercel.app/register', {name, email, password})
-    .then(result => console.log(result))
-    .catch(err => console.log(err))
-  }
   
-
   return (
     <>
       <Navbar/>
